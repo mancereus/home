@@ -1,0 +1,7 @@
+[user]
+	email = mschmitt@navteq.com
+	name = Matthias Schmitt
+[color]
+	status = true
+	branch = true
+	diff = true
