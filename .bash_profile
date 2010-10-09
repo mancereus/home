@@ -47,9 +47,10 @@ function proml {
   local       BLACK="\[\033[0;30m\]"
   local        BLUE="\[\033[0;34m\]"
   local       GREEN="\[\033[0;32m\]"
+  local       WHITE="\[\033[1;00m\]"
 
   PS1="$BLUE[\w$GREEN\$(parse_git_branch)$BLUE]\
-       $BLACK\$ "
+ $WHITE\$ "
   PS2='> '
   PS4='+ '
 }
