@@ -1,3 +1,5 @@
+[core]
+        excludesfile = .gitignore
 [user]
 	email = mschmitt@db12.de
 	name = Matthias Schmitt
@@ -5,3 +7,19 @@
 	status = true
 	branch = true
 	diff = true
+[alias]
+    st = status
+    d = diff
+    ci = commit -v
+    cia = commit -v -a
+    co = checkout
+    cp = cherry-pick
+    l = log
+    ll = log -p
+    lt = log trunk..
+    llt = log -p trunk..
+    lm = log master..
+    llm = log -p master..
+    b = branch
+    sr = svn rebase
+    sdc = svn dcommit

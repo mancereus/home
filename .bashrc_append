@@ -1,16 +1,15 @@
+export SDE=/c/sde
 
-export MAVEN_HOME="c:/dev/products/apps/maven-2.2.1"
-export ROO_HOME="c:/dev/products/apps/spring-roo-1.1.0.M1"
-export ANT_HOME="c:/dev/products/apps/ant-1.7.1"
+export ANT_HOME="$SDE/apps/control/apache-ant-1.8.1"
 export JAVA_HOME="c:/dev/products/apps/jdk1.6.0_07"
 
+ANT_BIN=`cygpath -u $ANT_HOME/bin`
 
 export GOROOT="c:/dev/products/apps/go"
 export GOARCH=386
 export GOOS=windows
 
-export PATH=/cygdrive/c/dev/products/apps/jdk1.6.0_07/bin:/cygdrive/c/dev/products/apps/ant-1.7.1/bin:/cygdrive/c/dev/products/apps/maven-2.2.1/bin:/cygdrive/c/dev/products/apps/go/bin:$PATH
+export PATH=/cygdrive/c/dev/products/apps/jdk1.6.0_07/bin:/cygdrive/c/dev/products/apps/maven-2.2.1/bin:/cygdrive/c/dev/products/apps/go/bin:$ANT_BIN:$PATH
 
-export SDE=/cygdrive/c/sde
 alias cdsde="cd $SDE"
 
