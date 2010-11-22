@@ -61,6 +61,7 @@ nnoremap k gk
 au FocusLost * :wa
 
 nnoremap <leader>w <C-w>v<C-w>l
+nnoremap <leader>f gg=G
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k

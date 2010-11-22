@@ -23,3 +23,8 @@
     b = branch
     sr = svn rebase
     sdc = svn dcommit
+    flfs = flow feature start
+    flff = flow feature finish
+    flrs = flow release start
+    flrf = flow release finish
+

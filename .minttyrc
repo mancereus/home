@@ -1,6 +1,8 @@
 Transparency=1
-CursorType=0
+CursorType=1
 FontHeight=10
 BackgroundColour=0,0,94
 CursorColour=255,255,255
 RightClickAction=1
+Columns=119
+Rows=49
