@@ -6,3 +6,5 @@ CursorColour=255,255,255
 RightClickAction=1
 Columns=119
 Rows=49
+BellFlash=1
+BoldAsFont=0

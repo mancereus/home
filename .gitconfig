@@ -8,23 +8,18 @@
 	branch = true
 	diff = true
 [alias]
-    st = status
-    d = diff
     ci = commit -v
     cia = commit -v -a
-    co = checkout
     cp = cherry-pick
-    l = log
-    ll = log -p
-    lt = log trunk..
-    llt = log -p trunk..
-    lm = log master..
-    llm = log -p master..
-    b = branch
     sr = svn rebase
     sdc = svn dcommit
     flfs = flow feature start
     flff = flow feature finish
     flrs = flow release start
     flrf = flow release finish
-
+    st = status
+    ci = commit
+    br = branch
+    co = checkout
+    df = diff
+    lg = log -p
