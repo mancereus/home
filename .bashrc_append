@@ -2,8 +2,8 @@ export SDE=/c/sde
 
 export ANT_HOME="$SDE/apps/control/apache-ant-1.8.1"
 export JAVA_HOME="c:/Programme/Java/jdk1.6.0_22"
-#export M2_HOME="$SDE/apps/control/apache-maven-3.0"
-export M2_HOME="$SDE/apps/control/apache-maven-2.2.1"
+export M2_HOME="$SDE/apps/control/apache-maven-3.0"
+#export M2_HOME="$SDE/apps/control/apache-maven-2.2.1"
 export ROO_HOME="$SDE/apps/control/spring-roo-1.1.0.RELEASE"
 export GRADLE_HOME="$SDE/apps/control/gradle-0.9-rc-2"
 
@@ -18,7 +18,7 @@ export GOARCH=386
 export GOOS=windows
 GO_BIN=`cygpath -u $GOROOT/bin`
 
-export PATH=$JAVA_BIN:$M2_BIN:$GO_BIN:$GRADLE_BIN:$ROO_BIN:$ANT_BIN:$PATH
+export PATH=~/bin:$JAVA_BIN:$M2_BIN:$GO_BIN:$GRADLE_BIN:$ROO_BIN:$ANT_BIN:$PATH
 
 alias cdsde="cd $SDE"
 

@@ -1,7 +1,7 @@
 [core]
         excludesfile = .gitignore
 [user]
-	email = mschmitt@db12.de
+	email = mschmitt@scoop-gmbh.de
 	name = Matthias Schmitt
 [color]
 	status = true
@@ -9,7 +9,7 @@
 	diff = true
 [alias]
     ci = commit -v
-    cia = commit -v -a
+    cm = commit -m
     cp = cherry-pick
     sr = svn rebase
     sdc = svn dcommit
