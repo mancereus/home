@@ -13,12 +13,12 @@ ROO_BIN=`cygpath -u $ROO_HOME/bin`
 M2_BIN=`cygpath -u $M2_HOME/bin`
 GRADLE_BIN=`cygpath -u $GRADLE_HOME/bin`
 
-export GOROOT="c:/sde/apps/go"
-export GOARCH=386
-export GOOS=windows
-GO_BIN=`cygpath -u $GOROOT/bin`
+#export GOROOT="c:/sde/apps/go"
+#export GOARCH=386
+#export GOOS=windows
+#GO_BIN=`cygpath -u $GOROOT/bin`
 
-export PATH=~/bin:$JAVA_BIN:$M2_BIN:$GO_BIN:$GRADLE_BIN:$ROO_BIN:$ANT_BIN:$PATH
+export PATH=~/bin:$JAVA_BIN:$M2_BIN:$GRADLE_BIN:$ANT_BIN:$PATH
 
 alias cdsde="cd $SDE"
 

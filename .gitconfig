@@ -1,14 +1,15 @@
 [core]
         excludesfile = .gitignore
 [user]
-	email = mschmitt@scoop-gmbh.de
+	email = mschmitt@db12.de
 	name = Matthias Schmitt
 [color]
 	status = true
 	branch = true
 	diff = true
 [alias]
-    ci = commit -v
+    sta = stash
+    stap = stash apply
     cm = commit -m
     cp = cherry-pick
     sr = svn rebase
@@ -18,8 +19,9 @@
     flrs = flow release start
     flrf = flow release finish
     st = status
-    ci = commit
     br = branch
     co = checkout
     df = diff
     lg = log -p
+	reco = rebase --continue
+	resk = rebase --skip
