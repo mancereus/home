@@ -1,6 +1,6 @@
 Transparency=low
 CursorType=underscore
-FontHeight=12
+FontHeight=13
 BackgroundColour=0,0,0
 CursorColour=255,255,255
 RightClickAction=paste
@@ -11,3 +11,4 @@ BoldAsFont=yes
 FontSmoothing=full
 ForegroundColour=255,255,255
 Term=xterm-256color
+Font=Inconsolata

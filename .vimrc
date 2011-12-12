@@ -1,6 +1,8 @@
 filetype off
-call pathogen#runtime_append_all_bundles()
+call pathogen#infect()
 filetype plugin indent on
+:syntax on
+:color desert
 
 set nocompatible
 
@@ -57,5 +59,3 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
-
-imap <c-space> <c-x><c-o>

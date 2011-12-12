@@ -101,6 +101,7 @@ alias vdir='ls --color=auto --format=long'
 alias ll='ls -l'                              # long list
 alias la='ls -A'                              # all but . and ..
 alias l='ls -CF'                              #
+export TODOTXT_DEFAULT_ACTION=ls
 alias t='todo -d ~/bin/todo.cfg'
 
 # Functions
