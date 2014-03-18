@@ -1,26 +1,36 @@
 export SDE=/c/sde
 
 export ANT_HOME="$SDE/apps/control/apache-ant-1.8.1"
-export JAVA_HOME="c:/Programme/Java/jdk1.6.0_22"
-export M2_HOME="$SDE/apps/control/apache-maven-3.0"
+export ANACONDA_HOME="$SDE/apps/anaconda"
+export JAVA_HOME="c:/Programme/Java/jdk1.7.0_13"
+#export JAVA_HOME="c:/Programme/Java/jdk1.6.0_31"
+#export JAVA_HOME="c:/Programme/Java/jdk1.8.0"
+export M2_HOME="$SDE/apps/apache-maven-3.0.5"
+export JULIA_HOME="$SDE/apps/julia"
 #export M2_HOME="$SDE/apps/control/apache-maven-2.2.1"
 export ROO_HOME="$SDE/apps/control/spring-roo-1.1.0.RELEASE"
-export GRADLE_HOME="$SDE/apps/control/gradle-0.9-rc-2"
+export GRADLE_HOME="$SDE/apps/gradle-1.5"
+export GO_HOME="$SDE/apps/go"
+export GLASSFISH_HOME="c:/sde/apps/glassfish3"
+export GOPATH=`cygpath -w "$SDE/go"`
+export MAVEN_OPTS="-Xms512m -Xmx1024m -XX:PermSize=256m -XX:MaxPermSize=512m -Dfile.encoding=UTF-8"
 
 JAVA_BIN=`cygpath -u $JAVA_HOME/bin`
 ANT_BIN=`cygpath -u $ANT_HOME/bin`
+JULIA_BIN=`cygpath -u $JULIA_HOME`
 ROO_BIN=`cygpath -u $ROO_HOME/bin`
 M2_BIN=`cygpath -u $M2_HOME/bin`
 GRADLE_BIN=`cygpath -u $GRADLE_HOME/bin`
+GO_BIN=`cygpath -u $GO_HOME/bin`
+GLASSFISH_BIN=`cygpath -u $GLASSFISH_HOME/bin`
+GOPATH_BIN=`cygpath -u $GOPATH/bin`
 
-#export GOROOT="c:/sde/apps/go"
-#export GOARCH=386
-#export GOOS=windows
-#GO_BIN=`cygpath -u $GOROOT/bin`
 
-export PATH=~/bin:$JAVA_BIN:$M2_BIN:$GRADLE_BIN:$ANT_BIN:$PATH
+#export PATH=~/bin:$JAVA_BIN:$M2_BIN:$GRADLE_BIN:$ANT_BIN:$JULIA_BIN:$PATH
+export PATH=$ANACONDA_HOME:~/bin:$M2_BIN:$JAVA_BIN:$GO_BIN:$GRADLE_BIN:$JULIA_BIN:$GLASSFISH_BIN:$GOPATH_BIN:$PATH
 
 alias cdsde="cd $SDE"
+alias subl="/c/Program\ Files/Sublime\ Text\ 3/sublime_text.exe "
 
 LS_COLORS='rs=0:di=01;33:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.axa=00;36:*.oga=00;36:*.spx=00;36:*.xspf=00;36:';
 export LS_COLORS

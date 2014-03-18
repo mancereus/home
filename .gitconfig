@@ -1,27 +1,114 @@
 [core]
-        excludesfile = .gitignore
+    excludesfile = .gitignore
+	editor = vim
+	autocrlf = true
+	filemode = false
 [user]
-	email = mschmitt@db12.de
+	email = matthias.schmitt@scoop-software.de
 	name = Matthias Schmitt
 [color]
 	status = true
 	branch = true
 	diff = true
 [alias]
-    sta = stash
-    stap = stash apply
-    cm = commit -m
-    cp = cherry-pick
-    sr = svn rebase
-    sdc = svn dcommit
     flfs = flow feature start
     flff = flow feature finish
     flrs = flow release start
     flrf = flow release finish
+
+    cl = clone
     st = status
-    br = branch
+    ci = commit
+    cm = commit -m
+    cma = commit -a -m
+    ca = commit --amend
+    amend = commit --amend
+    caa = commit -a --amend -C HEAD
+    filelog = log -u
+    fl = log -u
+
+    ai = add --interactive
+
     co = checkout
+    br = branch 
+    #"!git branch -ra | grep -v done"
+    bra = branch -ra
+    #list commands
+    le = log --oneline --decorate
+    lol =  log --graph --decorate --pretty=oneline --abbrev-commit
+	ll = log --pretty=format:%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn] --decorate --numstat
+    ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+    lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
+    ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
+    lg = log --pretty=format:"%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset"
+    standup = "!git log --since yesterday --author `git config user.email` --pretty=short" 
+    logtree=log --graph --oneline --decorate --all
+    lc  = "!f() { git ll "$1"^.."$1"; }; f"
+    lnc = log --pretty=format:"%h\\ %s\\ [%cn]"
+    #list all aliases
+    la = "!git config -l | grep alias | cut -c 7-"
     df = diff
-    lg = log -p
-	reco = rebase --continue
-	resk = rebase --skip
+    diff = diff --word-diff
+    d = diff --word-diff
+    dc = diff --cached
+    #list modified files in last commit
+    dl = "!git ll -1"
+    #diff last commit
+    dlc = diff --cached HEAD^
+    dr  = "!f() { git diff "$1"^.."$1"; }; f"
+    diffr  = "!f() { git diff "$1"^.."$1"; }; f"
+    branch = branch -ra
+    ready = rebase -i @{u}
+
+    #reset commands
+    r = reset
+    r1 = reset HEAD^
+    r2 = reset HEAD^^
+    rh = reset --hard
+    rh1 = reset HEAD^ --hard
+    rh2 = reset HEAD^^ --hard
+
+    #git svn
+    sr = svn rebase
+    sdc = svn dcommit
+    svnr = svn rebase
+    svnd = svn dcommit
+    svnl = svn log --oneline --show-commit
+
+    #stash
+    sl = stash list
+    sta = stash
+    stap = stash apply
+
+    cp = cherry-pick
+    grep = grep -Ii
+    gr = grep -Ii
+    #grep from root folder
+    gra = "!f() { A=$(pwd) && TOPLEVEL=$(git rev-parse --show-toplevel) && cd $TOPLEVEL && git grep --full-name -In $1 | xargs -I{} echo $TOPLEVEL/{} && cd $A; }; f"
+
+    #grep on filename
+    f = "!git ls-files | grep -i"
+
+    #rename branch tree to done-
+    done = "!f() { git branch | grep "$1" | cut -c 3- | grep -v done | xargs -I{} git branch -m {} done-{}; }; f"
+
+    #assume aliases
+    assume = update-index --assume-unchanged
+    unassume = update-index --no-assume-unchanged
+    #show assumed files
+    assumed = "!git ls-files -v | grep ^h | cut -c 3-"
+    #unassume all the assumed files
+    unassumeall = "!git assumed | xargs git update-index --no-assume-unchanged"
+    assumeall = "!git st -s | awk {'print $2'} | xargs git assume"
+
+    lasttag = describe --tags --abbrev=0
+    lt = describe --tags --abbrev=0
+
+    #merges
+    ours = "!f() { git co --ours $@ && git add $@; }; f"
+    theirs = "!f() { git co --theirs $@ && git add $@; }; f"
+[http]
+[http]
+	sslVerify = false
+[credential]
+	helper = cache --timeout=3600
